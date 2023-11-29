@@ -1,0 +1,32 @@
+[package]
+name = "vortex"
+version = "0.1.0"
+authors = ["The Elyxium Team <dev@elyxium.io>"]
+description = ""
+edition = "2018"
+
+[dependencies]
+actix = "0.7.9"
+chrono = "0.4.6"
+reqwest = "0.9.8"
+rand = "0.6.4"
+futures = "0.1.25"
+tokio-timer = "0.2.8"
+log = "0.4.6"
+pretty_env_logger = "0.2.5"
+clap = "2.32.0"
+regex = "1.1.0"
+serde_json = "1.0.37"
+toml = "0.4.10"
+serde = "1.0.83"
+serde_derive = "1.0.80"
+kuchiki = "0.7.2"
+
+[[example]]
+name = "wikipedia"
+path = "examples/wikipedia.rs"
+
+[[example]]
+name = "wikipedia2"
+path = "examples/wikipedia2.rs"
+

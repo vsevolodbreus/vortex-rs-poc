@@ -1,0 +1,34 @@
+[spider]
+name = "spider"
+version = "0.1.0"
+
+[scheduler]
+download_delay = 100
+concurrent_requests = 4
+
+[downloader]
+middleware_list = ["UserAgent", "Print"]
+
+[downloader.middleware.proxy]
+http = ["http://proxy.com"]
+https = ["https://proxy.com"]
+
+[downloader.middleware.user_agent]
+value = "Mozilla/5.0"
+
+[downloader.middleware.print]
+max_len = 500
+
+[parser]
+crawl_strategy = "BFO" # Choices: BFO, DFO, Basic
+
+[pipeline]
+element_list = ["Timestamping", "Print"]
+
+[pipeline.element.timestamping]
+offset = "Utc"
+format = "%D %H:%M:%S"
+field = "timestamp"
+
+[pipeline.element.print]
+max_len = 500

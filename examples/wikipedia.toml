@@ -1,0 +1,6 @@
+[spider]
+name = "spider"
+version = "0.1.0"
+
+[scheduler]
+download_delay = 200
